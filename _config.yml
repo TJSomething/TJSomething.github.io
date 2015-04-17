@@ -1,0 +1,12 @@
+# Site settings
+title: TJSomething's Something Blog
+email: tjbk123@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    My reference for how to do things I've done.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://tjsomething.github.io" # the base hostname & protocol for your site
+twitter_username: TJSomething
+github_username:  TJSomething
+
+# Build settings
+markdown: kramdown
