@@ -31,19 +31,19 @@ and $NDK_TOOLCHAIN is a place you can keep a ~300MB compiler toolchain.
 
 However, there is a slight trick to getting Cargo to link code. If you get:
 
-```
+{% highlight text %}
 /usr/bin/ld: /home/tommy/workspace/xlang-test/hello_world/target/arm-linux-androideabi/debug/hello_world.o: Relocations in generic ELF (EM: 40)
 /home/tommy/workspace/xlang-test/hello_world/target/arm-linux-androideabi/debug/hello_world.o: error adding symbols: File in wrong format
 collect2: error: ld returned 1 exit status
-```
+{% endhighlight %}
 
 when you compile for Android or
 
-```
+{% highlight text %}
 note: /usr/bin/ld: unrecognized option '--enable-long-section-names'
 /usr/bin/ld: use the --help option for usage information
 collect2: error: ld returned 1 exit status
-```
+{% endhighlight %}
 
 then you need to set your linkers. The first step is wrapping the Android linker, as all 
 Android executables need to be compiled as position independent executables and
